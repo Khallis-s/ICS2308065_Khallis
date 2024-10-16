@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body style="background-color: peachpuff">
+    
+    <form actions="mentor" method="post">
+        {% csrf_token %}
+        <p>Enter mentor id:</p>
+        <input type="text" name="code"><br>
+        <p>Enter mentor name:</p>
+        <input type="text" name="name">
+        <p>Enter mentor room number:</p>
+        <input type="text" name="room"><br><br>
+        <input type="submit" value="SUBMIT"><br><br>
+    </form>
+
+    <table>
+        <tr>
+            <th>name</th>
+            <th>code</th>
+            <th>room number</th>
+        </tr>
+        {% for x in mentors %}
+        <tr>
+            <td>{{x.menid}}</td>
+            <td>{{x.menname}}</td>
+            <td>{{x.menroomno}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WELCOME TO DJANGO VARIABLE</h1>
+    <h2>DISPLAY USING VARIABLE</h2>
+
+    <a href="{% url 'database'%}">DISPLAY USING VARIABLE USING MODELS</a>
+{% if book_id == 1 %}
+<h1>Hello Jiggas</h1>
+Welcome to Selection
+{% endif %}
+    <h2>COURSE</h2>
+    <a href="{% url 'course'%}">COURSE DETAILS</a><br><br>
+    <a href="{% url 'mentor'%}">MENTOR INFO</a><br><br>
+    <a href="{% url 'search_course'%}">SEARCH MENTOR</a>
+</body>
+</html>

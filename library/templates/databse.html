@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<h2>A basic HTML table</h2>
+
+<table style="width:100%">
+    <ul>
+        {% for x in mystudents %}
+            <li>{{ x.student_name }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Books List</h1>
+    <ul>
+        {% for x in book %}
+            <li>{{ x.book_id }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Borrow IDs List</h1>
+    <ul>
+        {% for x in borrow %}
+            <li>{{ x.borrow_id }}</li>
+        {% endfor %}
+    </ul>
+</table>
+
+
+</body>
+</html>
