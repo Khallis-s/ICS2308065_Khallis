@@ -1,0 +1,1 @@
+web: gunicorn ICS2308065_Khallis.wsgi --log.file-
